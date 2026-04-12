@@ -11,7 +11,7 @@ app.innerHTML = `
   <div class="bg-orb bg-orb-2" aria-hidden="true"></div>
 
   <header class="site-header">
-    <a class="brand" href="#inicio">Centro Serena</a>
+    <a class="brand" href="#inicio">Joan Psicologia</a>
     <nav aria-label="Navegacion principal">
       <a href="#inicio">Inicio</a>
       <a href="#terapia">Nuestra terapia</a>
@@ -25,11 +25,11 @@ app.innerHTML = `
   <main>
     <section id="inicio" class="hero container">
       <div class="hero-copy">
-        <p class="eyebrow">El lugar seguro que te acompana</p>
+        <p class="eyebrow">Desde Cervello para toda Espana</p>
         <h1>Recupera calma, foco y confianza.</h1>
         <p>
-          Te acompanamos con terapia cercana y basada en evidencia para que vuelvas a sentirte
-          en equilibrio.
+          Sesiones realizadas de manera telematica, con un enfoque cercano y basado en evidencia
+          para ayudarte a recuperar equilibrio emocional.
         </p>
         <div class="hero-actions">
           <a class="btn" href="#contacto">Reserva una cita</a>
@@ -37,12 +37,12 @@ app.innerHTML = `
         </div>
       </div>
       <aside class="hero-card">
-        <h2>Primera llamada gratuita</h2>
-        <p>15 minutos para entender tu situacion y orientarte sin compromiso.</p>
+        <h2>Primera llamada de orientacion</h2>
+        <p>15 minutos para entender tu situacion y explicarte como funciona la terapia online.</p>
         <ul>
           <li>Respuesta en menos de 24h</li>
-          <li>Modalidad presencial y online</li>
-          <li>Horario ampliado de lunes a sabado</li>
+          <li>Modalidad 100% telematica</li>
+          <li>Horarios flexibles de lunes a sabado</li>
         </ul>
       </aside>
     </section>
@@ -88,11 +88,11 @@ app.innerHTML = `
     </section>
 
     <section id="centro" class="container center-block">
-      <p class="eyebrow">Nuestro centro</p>
-      <h2>Un espacio sereno y acogedor en tu ciudad.</h2>
+      <p class="eyebrow">Sobre Joan</p>
+      <h2>Psicologo en Cervello con sesiones online.</h2>
       <p>
-        Consultas privadas, ambiente tranquilo y accesible. Tambien ofrecemos sesiones online para
-        toda Espana.
+        Atencion telematica para adultos y parejas, con procesos personalizados y seguimiento
+        continuo desde la primera sesion.
       </p>
     </section>
 
@@ -118,7 +118,7 @@ app.innerHTML = `
   </main>
 
   <footer class="site-footer">
-    <p>Centro Serena · Psicologia</p>
+    <p>Joan Psicologia · Cervello · Sesiones telematicas</p>
     <a href="https://wa.me/34600000000" target="_blank" rel="noreferrer">WhatsApp</a>
   </footer>
 `;
