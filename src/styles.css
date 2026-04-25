@@ -245,10 +245,13 @@ em { font-style: italic; color: var(--brand); }
 
 .hero-h1-line2 {
   display: block;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: var(--brand);
-  letter-spacing: 0.02em;
+  font-size: 0.42em;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--muted);
+  letter-spacing: 0.01em;
+  text-align: right;
+  margin-top: 0.3rem;
 }
 
 .hero-lead {

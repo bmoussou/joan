@@ -52,11 +52,6 @@ app.innerHTML = `
               <span class="stat-num">40€</span>
               <span class="stat-label">por sesion</span>
             </div>
-            <div class="stat-divider"></div>
-            <div class="stat-item">
-              <span class="stat-num">1&ordf; gratis</span>
-              <span class="stat-label">sin compromiso</span>
-            </div>
           </div>
           <div class="hero-actions">
             <a class="btn" href="#contacto">Primera consulta gratis</a>
