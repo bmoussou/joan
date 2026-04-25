@@ -79,18 +79,30 @@ export function initSharedJS() {
   const menuToggle = document.querySelector<HTMLButtonElement>("#menu-toggle");
   const mainNav = document.querySelector<HTMLElement>("#main-nav");
 
+  function openMenu() {
+    // Mover el nav fuera del header para que no quede atrapado por su backdrop-filter
+    document.body.appendChild(mainNav!);
+    mainNav?.classList.add("nav-open");
+    menuToggle?.classList.add("open");
+    menuToggle?.setAttribute("aria-label", "Cerrar menú");
+    document.body.style.overflow = "hidden";
+  }
+
   function closeMenu() {
     mainNav?.classList.remove("nav-open");
     menuToggle?.classList.remove("open");
     menuToggle?.setAttribute("aria-label", "Abrir menú");
     document.body.style.overflow = "";
+    // Devolver el nav al header
+    siteHeader?.appendChild(mainNav!);
   }
 
   menuToggle?.addEventListener("click", () => {
-    const isOpen = mainNav?.classList.toggle("nav-open");
-    menuToggle!.classList.toggle("open", !!isOpen);
-    menuToggle!.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
-    document.body.style.overflow = isOpen ? "hidden" : "";
+    if (mainNav?.classList.contains("nav-open")) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
   });
 
   mainNav?.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeMenu));
