@@ -234,12 +234,41 @@ em { font-style: italic; color: var(--brand); }
   letter-spacing: -0.01em;
 }
 
+.hero-h1-line1 {
+  display: block;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  font-size: 0.72em;
+  color: var(--text);
+}
+
+.hero-h1-line2 {
+  display: block;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--brand);
+  letter-spacing: 0.02em;
+}
+
 .hero-lead {
-  font-size: 1.05rem;
-  color: var(--muted);
   max-width: 52ch;
   margin-bottom: 1.6rem;
+}
+
+.hero-lead p {
+  font-size: 0.98rem;
+  color: var(--muted);
   line-height: 1.7;
+  margin-bottom: 0.55rem;
+}
+
+.hero-lead p:last-child { margin-bottom: 0; }
+
+.hero-lead-intro {
+  font-size: 1.1rem !important;
+  font-weight: 700;
+  color: var(--text) !important;
 }
 
 .hero-stats {

@@ -30,16 +30,18 @@ app.innerHTML = `
     <section id="inicio" class="hero">
       <div class="container hero-inner">
         <div class="hero-copy">
-          <p class="eyebrow">Psicologia para opositores</p>
+          <p class="eyebrow">Acompanamiento emocional para opositores</p>
           <h1 class="hero-h1">
-            Preparado para el examen.<br>
-            <em>Listo mentalmente.</em>
+            <span class="hero-h1-line1">DE UN OPOSITOR PARA OPOSITORES</span>
+            <span class="hero-h1-line2">Un espacio para ti.</span>
           </h1>
-          <p class="hero-lead">
-            Soy Joan, psicologo y opositor. Posicion 591 del PIR en Espana.
-            Trabajo contigo la ansiedad, la incertidumbre y la confianza que necesitas
-            para llegar hasta el final, sin agotarte por el camino.
-          </p>
+          <div class="hero-lead">
+            <p class="hero-lead-intro">Opositar no es solo estudiar.</p>
+            <p>Es convivir con la exigencia, la duda y la sensacion de que nunca es suficiente.</p>
+            <p>Hay dias en los que estas delante de los apuntes... pero no avanzas. Dias de bloqueo, de compararte, de no saber como seguir.</p>
+            <p>Soy Joan, psicologo y opositor PIR, y he vivido este proceso en primera persona.</p>
+            <p>Por eso nace Relleu: un espacio de acompanamiento emocional para opositores, donde entender lo que te pasa, recuperar el equilibrio y sostener el camino sin dejarte a ti de lado.</p>
+          </div>
           <div class="hero-stats">
             <div class="stat-item">
               <span class="stat-num">#591</span>
@@ -64,23 +66,15 @@ app.innerHTML = `
         <div class="hero-visual">
           <div class="hero-quote-card">
             <blockquote>
-              &ldquo;La oposicion pone a prueba mucho mas que tu conocimiento. Pone a prueba quien eres bajo presion.&rdquo;
+              &ldquo;Estar bien con uno mismo no es suficiente para aprobar una oposicion, pero si es una condicion necesaria para poder intentarlo.&rdquo;
             </blockquote>
             <div class="quote-author">
               <div class="quote-avatar"><img src="/joan.jpg" alt="Joan Agudo Ramon" /></div>
               <div>
                 <strong>Joan Agudo Ramon</strong>
-                <span>Psicologo &middot; Opositor PIR</span>
+                <span>Psicologo</span>
               </div>
             </div>
-          </div>
-          <div class="hero-tags">
-            <span>Ansiedad</span>
-            <span>Autoestima</span>
-            <span>Incertidumbre</span>
-            <span>Confianza</span>
-            <span>Solo online</span>
-            <span>Modelo ACT</span>
           </div>
         </div>
       </div>
