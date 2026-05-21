@@ -249,7 +249,10 @@ app.innerHTML = `
                 <span style="color: var(--dark-muted); font-size: 0.85rem;">/ sesión</span>
               </div>
             </div>
-            <p style="color: var(--dark-muted); font-size: 0.88rem; line-height: 1.7;">Primera sesión gratuita · Pack de 4 sesiones con descuento</p>
+            <div style="display: flex; flex-direction: column; gap: 0.35rem;">
+              <span style="color: var(--dark-muted); font-size: 0.88rem;">Primera sesión gratuita</span>
+              <span style="color: var(--dark-muted); font-size: 0.88rem;">Pack de 4 sesiones con descuento</span>
+            </div>
             <a class="btn" href="/precios.html">Consultar tarifas</a>
           </div>
         </div>
