@@ -113,6 +113,60 @@ app.innerHTML = `
       </div>
     </section>
 
+    <!-- ¿CÓMO SÉ SI ESTE ESPACIO ES PARA MÍ? -->
+    <section class="section" id="para-mi">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="eyebrow">Para ti si…</p>
+          <h2>¿Cómo sé si este espacio<br>es para mí?</h2>
+        </div>
+
+        <div class="para-mi-grid reveal">
+          <div class="para-mi-item">
+            <div class="para-mi-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.09 6.26L19 5l-3.74 5.13L22 12l-6.74 1.13L19 19l-5.91-3.26L12 22l-1.09-6.26L5 19l3.74-5.13L2 12l6.74-1.13L5 5z"/></svg>
+            </div>
+            <p>Si todo se hace cuesta arriba</p>
+          </div>
+          <div class="para-mi-item">
+            <div class="para-mi-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.09 6.26L19 5l-3.74 5.13L22 12l-6.74 1.13L19 19l-5.91-3.26L12 22l-1.09-6.26L5 19l3.74-5.13L2 12l6.74-1.13L5 5z"/></svg>
+            </div>
+            <p>Si te sientes perdido con la oposición o contigo mismo</p>
+          </div>
+          <div class="para-mi-item">
+            <div class="para-mi-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.09 6.26L19 5l-3.74 5.13L22 12l-6.74 1.13L19 19l-5.91-3.26L12 22l-1.09-6.26L5 19l3.74-5.13L2 12l6.74-1.13L5 5z"/></svg>
+            </div>
+            <p>Si te agobia cómo conllevar el verano y la oposición</p>
+          </div>
+          <div class="para-mi-item">
+            <div class="para-mi-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.09 6.26L19 5l-3.74 5.13L22 12l-6.74 1.13L19 19l-5.91-3.26L12 22l-1.09-6.26L5 19l3.74-5.13L2 12l6.74-1.13L5 5z"/></svg>
+            </div>
+            <p>Si dudas constantemente de si vas a ser capaz</p>
+          </div>
+          <div class="para-mi-item">
+            <div class="para-mi-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.09 6.26L19 5l-3.74 5.13L22 12l-6.74 1.13L19 19l-5.91-3.26L12 22l-1.09-6.26L5 19l3.74-5.13L2 12l6.74-1.13L5 5z"/></svg>
+            </div>
+            <p>Si notas que necesitas parar, pero no te permites hacerlo</p>
+          </div>
+          <div class="para-mi-item">
+            <div class="para-mi-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.09 6.26L19 5l-3.74 5.13L22 12l-6.74 1.13L19 19l-5.91-3.26L12 22l-1.09-6.26L5 19l3.74-5.13L2 12l6.74-1.13L5 5z"/></svg>
+            </div>
+            <p>Si no sabes si seguir, cambiar o dejarlo</p>
+          </div>
+        </div>
+
+        <div class="para-mi-closing reveal">
+          <p>Y necesitas un espacio para hablar, escucharte y reconectar. Porque detrás de cada oposición no solo hay un resultado, hay una persona atravesando un proceso.</p>
+          <a class="btn" href="#contacto">Hablamos</a>
+        </div>
+      </div>
+    </section>
+
     <!-- CÓMO FUNCIONA — EL PROCESO -->
     <section class="section section-dark" id="proceso">
       <div class="container">
@@ -188,13 +242,15 @@ app.innerHTML = `
           </div>
           <div class="pricing-info-card pricing-info-card-dark">
             <p class="eyebrow" style="color: var(--brand-light)">Sesiones</p>
-            <span style="font-size: 0.78rem; color: var(--dark-muted); letter-spacing: 0.02em;">A partir de</span>
-            <div class="precio-display">
-              <span class="precio-euro">40€</span>
-              <span style="color: var(--dark-muted); font-size: 0.88rem">/ sesión</span>
+            <div style="padding: 0.5rem 0 0.75rem; border-bottom: 1px solid var(--dark-border);">
+              <span style="display: block; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--dark-muted); margin-bottom: 0.4rem;">A partir de</span>
+              <div style="display: flex; align-items: baseline; gap: 0.45rem;">
+                <span style="font-family: 'Cormorant Garamond', serif; font-size: 3.2rem; font-weight: 700; color: var(--dark-text); line-height: 1;">40€</span>
+                <span style="color: var(--dark-muted); font-size: 0.85rem;">/ sesión</span>
+              </div>
             </div>
-            <p style="color: var(--dark-muted); font-size: 0.88rem; line-height: 1.7;">Primera sesión gratuita · Pack de 4 sesiones disponible</p>
-            <a class="btn" href="/precios.html" style="margin-top: auto">Consultar tarifas</a>
+            <p style="color: var(--dark-muted); font-size: 0.88rem; line-height: 1.7;">Primera sesión gratuita · Pack de 4 sesiones con descuento</p>
+            <a class="btn" href="/precios.html">Consultar tarifas</a>
           </div>
         </div>
       </div>
