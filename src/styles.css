@@ -882,8 +882,8 @@ input:focus, textarea:focus {
    FOOTER
 ══════════════════════════════════ */
 .site-footer {
-  background: #130f0d;
-  color: #7a6058;
+  background: #211a17;
+  color: #b09080;
 }
 
 .footer-inner {
@@ -892,19 +892,19 @@ input:focus, textarea:focus {
   justify-content: space-between;
   gap: 2rem;
   padding: 3rem 0 2.5rem;
-  border-bottom: 1px solid #221a17;
+  border-bottom: 1px solid #2e2420;
   flex-wrap: wrap;
 }
 
 .footer-brand-link {
-  color: #f6efe8;
+  color: #e8ddd5;
   display: block;
   margin-bottom: 0.3rem;
 }
 
 .footer-sub {
   font-size: 0.83rem;
-  color: #5a4038;
+  color: #7a6058;
 }
 
 .footer-nav,
@@ -917,12 +917,12 @@ input:focus, textarea:focus {
 .footer-nav a,
 .footer-contact a {
   font-size: 0.88rem;
-  color: #7a6058;
+  color: #907060;
   transition: color 0.2s;
 }
 
 .footer-nav a:hover,
-.footer-contact a:hover { color: #f6efe8; }
+.footer-contact a:hover { color: #e8ddd5; }
 
 .footer-copy {
   padding: 1.2rem 0;
@@ -930,7 +930,7 @@ input:focus, textarea:focus {
 
 .footer-copy p {
   font-size: 0.78rem;
-  color: #3a2a24;
+  color: #5a4a44;
 }
 
 /* ══════════════════════════════════

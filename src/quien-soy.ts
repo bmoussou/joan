@@ -13,7 +13,7 @@ app.innerHTML = `
     <section class="page-hero">
       <div class="container page-hero-inner reveal">
         <div class="page-hero-avatar">
-          <img src="/joan.jpg" alt="Joan Agudo Ramon" />
+          <img src="/fotoJoan2.jpg" alt="Joan Agudo Ramon" />
         </div>
         <p class="eyebrow">Sobre mí</p>
         <h1>Joan Agudo Ramon</h1>

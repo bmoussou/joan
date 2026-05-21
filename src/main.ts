@@ -36,7 +36,7 @@ app.innerHTML = `
               &ldquo;Estar bien con uno mismo no es suficiente para aprobar una oposición, pero sí es una condición necesaria para poder intentarlo.&rdquo;
             </blockquote>
             <div class="quote-author">
-              <div class="quote-avatar"><img src="/joan.jpg" alt="Joan Agudo Ramon" /></div>
+              <div class="quote-avatar"><img src="/fotoJoan2.jpg" alt="Joan Agudo Ramon" /></div>
               <div>
                 <strong>Joan Agudo Ramon</strong>
                 <span>Psicólogo</span>
