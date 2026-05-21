@@ -1509,6 +1509,129 @@ input:focus, textarea:focus {
   line-height: 1.7;
 }
 
+/* Proceso interactivo */
+.proceso-interactive {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.proceso-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  position: relative;
+}
+
+.proceso-tabs::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--dark-border);
+}
+
+.proceso-tab {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 0.9rem 0.5rem 1.1rem;
+  cursor: pointer;
+  text-align: center;
+  color: var(--dark-muted);
+  transition: color 0.25s, border-color 0.25s;
+  position: relative;
+  z-index: 1;
+}
+
+.proceso-tab:hover { color: var(--dark-text); }
+
+.proceso-tab.active {
+  color: var(--dark-text);
+  border-bottom-color: var(--brand-light);
+}
+
+.proceso-tab-num {
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--brand-light);
+  opacity: 0.4;
+  line-height: 1;
+  margin-bottom: 0.35rem;
+  transition: opacity 0.25s;
+}
+
+.proceso-tab.active .proceso-tab-num { opacity: 1; }
+
+.proceso-tab-label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.proceso-desc-wrap {
+  min-height: 130px;
+  padding: 2.5rem 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.proceso-desc {
+  display: none;
+  font-size: 1.05rem;
+  color: var(--dark-muted);
+  line-height: 1.85;
+  text-align: center;
+  max-width: 560px;
+}
+
+.proceso-desc.active {
+  display: block;
+  animation: procesoFadeIn 0.3s ease;
+}
+
+@keyframes procesoFadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.proceso-nav {
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+}
+
+.proceso-nav-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--dark-border);
+  border-radius: var(--radius-pill);
+  color: var(--dark-muted);
+  padding: 0.5rem 1.3rem;
+  cursor: pointer;
+  font: 500 0.85rem "Outfit", sans-serif;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.proceso-nav-btn:hover:not(:disabled) {
+  background: rgba(161, 79, 60, 0.15);
+  color: var(--dark-text);
+  border-color: rgba(161, 79, 60, 0.3);
+}
+
+.proceso-nav-btn:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+@media (max-width: 600px) {
+  .proceso-tabs { grid-template-columns: repeat(2, 1fr); }
+  .proceso-tab-label { font-size: 0.72rem; }
+}
+
 /* Pricing pair */
 .pricing-pair {
   display: grid;

@@ -47,45 +47,130 @@ app.innerHTML = `
       </div>
     </section>
 
-    <!-- SOBRE MÍ — preview -->
-    <section id="sobre-mi" class="section">
+    <!-- SOBRE MÍ — MI HISTORIA -->
+    <section class="section section-dark" id="sobre-mi">
+      <div class="container prose-section reveal">
+        <p class="eyebrow" style="color: var(--brand-light)">Mi historia</p>
+        <h2 class="prose-h2">Hola, soy Joan.</h2>
+        <div class="prose">
+          <p class="prose-lead">Hola!! Soy Joan, psicólogo…</p>
+          <p>Y bueno, se podría decir que sé lo que significa estar dentro de una oposición… Es un camino que te exige mucho más de lo que se ve; constancia en los días buenos, resistencia en los días malos y, sobre todo, convivir con la incertidumbre…</p>
+          <p>Esa experiencia te hace vivir de otra manera; la presión, las dudas, el cansancio mental y esa sensación de que nunca es suficiente.</p>
+          <p>Y por eso nace Relleu: un espacio para poder parar, ordenar lo que estás viviendo y poder darte el espacio que te está quitando la oposición.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE MÍ — FORMACIÓN + EXPERIENCIA -->
+    <section class="section" id="formacion">
       <div class="container">
-        <div class="preview-card reveal">
-          <div class="preview-avatar">
-            <img src="/joan.jpg" alt="Joan Agudo Ramon" />
+        <div class="two-col-section">
+
+          <div class="info-block reveal">
+            <p class="eyebrow">Mi formación</p>
+            <h2 class="info-h2">Preparado para acompañarte.</h2>
+            <div class="prose">
+              <p>Soy psicólogo graduado por la Universidad de Barcelona, donde fui becado por excelencia académica. También he preparado el PIR, obteniendo la posición 591 en la convocatoria de 2026, entre más de 4.000 personas.</p>
+              <p>Sigo formándome de manera continua para ofrecer una atención actualizada y de calidad. Próximamente me especializaré en terapias contextuales como la Terapia de Aceptación y Compromiso (ACT).</p>
+              <p>Pero más allá de la formación, hay algo que guía mi forma de trabajar: la flexibilidad. Me apoyo en la evidencia científica, pero no creo en enfoques rígidos. Cada persona es distinta, y la terapia también debe serlo.</p>
+            </div>
           </div>
-          <div class="preview-copy">
-            <p class="eyebrow">Sobre mí</p>
-            <h2 class="preview-h2">Hola, soy Joan.</h2>
-            <p class="preview-lead">
-              Psicólogo graduado por la UB y opositor PIR (posición 591). He vivido el proceso desde dentro
-              y eso cambia la forma de acompañar. Actualmente trabajo en PsicoJove, un servicio de atención
-              a jóvenes donde acompaño a personas en contextos de presión y exigencia.
-            </p>
-            <a class="btn btn-ghost" href="/quien-soy.html">Conocerme mejor &rarr;</a>
+
+          <div class="info-block reveal" style="--delay:100ms">
+            <p class="eyebrow">Mi experiencia</p>
+            <h2 class="info-h2">Lo que me ha dado forma.</h2>
+            <div class="prose">
+              <p>Escribiendo esto me he dado cuenta de que mi experiencia tiene algo en común: trabajar con personas que, como tú, están intentando sostenerse en contextos exigentes.</p>
+              <p>He trabajado en el CSMIJ de Horta y Guinardó (Centro de Salud Mental Infantil y Juvenil). Allí aprendí a intervenir en situaciones de alta complejidad, a gestionar bloqueos, ansiedad y desregulación emocional.</p>
+              <p>Actualmente formo parte del proyecto PsicoJove, un servicio municipal de atención psicológica para jóvenes de 12 a 30 años, acompañando a personas que atraviesan momentos de ansiedad, desmotivación o presión, desde un enfoque práctico y adaptado a cada caso.</p>
+              <p>Todo esto ha dado forma a mi manera de trabajar: ayudarte a manejar la presión, comprender qué hay detrás de tus bloqueos y encontrar una forma más sostenible de afrontar el proceso.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CÓMO FUNCIONA — ¿EN QUÉ CONSISTE? -->
+    <section class="section" id="como-funciona">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="eyebrow">El acompañamiento</p>
+          <h2>¿En qué consiste el acompañamiento?</h2>
+        </div>
+
+        <div class="reveal" style="max-width: 680px; margin: 0 auto; text-align: center; display: grid; gap: 1.6rem;">
+          <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(1.25rem, 2.2vw, 1.6rem); color: var(--brand); line-height: 1.55; font-weight: 600;">Un espacio seguro donde puedes ser tú mismo, entenderte mejor y construir una forma de vivir (y opositar) más sostenible.</p>
+          <p style="font-size: 0.97rem; color: var(--muted); line-height: 1.8;">La forma de acompañar se basará en escucharte, adaptarme a ti y ayudarte a construir herramientas que realmente te sirvan. Partiendo de una idea clave, tú eres quien mejor se conoce.</p>
+          <p style="font-size: 0.97rem; color: var(--muted); line-height: 1.8;">En Relleu trabajamos desde un enfoque cercano, práctico y basado en la evidencia. Pero, sobre todo, humano.</p>
+          <div class="hero-tags" style="justify-content: center;">
+            <span>Sin juicios</span>
+            <span>Sin presiones</span>
+            <span>A tu ritmo</span>
+          </div>
+          <p style="font-size: 0.97rem; color: var(--muted); line-height: 1.8;">La terapia es un espacio seguro donde puedes ser tú mismo, entenderte mejor y construir una forma de vivir (y opositar) más sostenible.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CÓMO FUNCIONA — EL PROCESO -->
+    <section class="section section-dark" id="proceso">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="eyebrow" style="color: var(--brand-light)">El proceso</p>
+          <h2 style="color: var(--dark-text)">¿Cómo será tu proceso?</h2>
+          <p class="section-lead" style="color: var(--dark-muted)">
+            Cada proceso es único, pero generalmente seguimos estos pasos:
+          </p>
+        </div>
+
+        <div class="proceso-interactive reveal">
+          <div class="proceso-tabs">
+            <button class="proceso-tab active" data-step="0">
+              <span class="proceso-tab-num">01</span>
+              <span class="proceso-tab-label">Primera sesión</span>
+            </button>
+            <button class="proceso-tab" data-step="1">
+              <span class="proceso-tab-num">02</span>
+              <span class="proceso-tab-label">Definir objetivos</span>
+            </button>
+            <button class="proceso-tab" data-step="2">
+              <span class="proceso-tab-num">03</span>
+              <span class="proceso-tab-label">Acompañamiento en el proceso</span>
+            </button>
+            <button class="proceso-tab" data-step="3">
+              <span class="proceso-tab-num">04</span>
+              <span class="proceso-tab-label">Seguimiento y cierre</span>
+            </button>
+          </div>
+          <div class="proceso-desc-wrap">
+            <p class="proceso-desc active">Recogemos información para comprender tus necesidades y valorar si este acompañamiento encaja contigo.</p>
+            <p class="proceso-desc">Exploramos qué hay detrás de lo que sientes y construimos juntos una dirección clara hacia donde quieres avanzar.</p>
+            <p class="proceso-desc">Trabajamos dentro y fuera de sesión para acercarte a tus objetivos, acompañando también los imprevistos, bloqueos y retos del día a día.</p>
+            <p class="proceso-desc">El objetivo no es que dependas de la terapia, sino que puedas sostener tus avances por ti mismo. Que Relleu sea un apoyo en el camino, no un ancla.</p>
+          </div>
+          <div class="proceso-nav">
+            <button class="proceso-nav-btn" id="proceso-prev" disabled>← Anterior</button>
+            <button class="proceso-nav-btn" id="proceso-next">Siguiente →</button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CÓMO FUNCIONA — preview -->
-    <section class="section section-dark" id="como-funciona-preview">
+    <!-- CÓMO FUNCIONA — DURACIÓN Y PRECIO -->
+    <section class="section" id="precio">
       <div class="container">
-        <div class="cf-preview reveal">
-          <div class="cf-preview-copy">
-            <p class="eyebrow" style="color: var(--brand-light)">Cómo funciona</p>
-            <h2 style="color: var(--dark-text)">Un acompañamiento a tu medida.</h2>
-            <p style="color: var(--dark-muted); line-height: 1.75; margin-bottom: 1.4rem">
-              Escucharte, adaptarme y construir contigo las herramientas que te sirvan.
-              Un proceso en cuatro pasos, sin juicios y sin presiones.
-            </p>
-            <a class="btn btn-ghost" href="/como-funciona.html">Ver el proceso completo &rarr;</a>
+        <div class="pricing-pair reveal">
+          <div class="pricing-info-card">
+            <p class="eyebrow">Duración</p>
+            <h3>¿Cuánto tiempo durará?</h3>
+            <p>Cada proceso es único y decirte que durará <em>x</em> sesiones sería mentirte. Durará lo que tú necesites.</p>
+            <p>En Relleu vemos la psicología como un punto de apoyo para empoderarte, no como un acompañamiento eterno e innecesario.</p>
           </div>
-          <div class="cf-preview-steps">
-            <div class="cf-step"><span class="cf-num">01</span><span class="cf-label">Primera sesión gratuita</span></div>
-            <div class="cf-step"><span class="cf-num">02</span><span class="cf-label">Análisis y objetivos</span></div>
-            <div class="cf-step"><span class="cf-num">03</span><span class="cf-label">Acompañamiento terapéutico</span></div>
-            <div class="cf-step"><span class="cf-num">04</span><span class="cf-label">Consolidación</span></div>
+          <div class="pricing-info-card pricing-info-card-dark">
+            <p class="eyebrow" style="color: var(--brand-light)">Precio</p>
+            <p style="color: var(--dark-muted); font-size: 0.9rem; line-height: 1.75;">¿Cuánto cuesta? En la página de precios encontrarás toda la información sobre tarifas y modalidades.</p>
+            <a class="btn" href="/precios" style="margin-top: 0.5rem">Ver precios</a>
           </div>
         </div>
       </div>
@@ -155,15 +240,29 @@ app.innerHTML = `
 
 initSharedJS();
 
-// Tarjeta "Cómo funciona" — toda clickable
-const cfPreview = document.querySelector<HTMLElement>(".cf-preview");
-if (cfPreview) {
-  cfPreview.addEventListener("click", (e) => {
-    if (!(e.target as HTMLElement).closest("a")) {
-      window.location.href = "/como-funciona.html";
-    }
-  });
-}
+// Proceso interactivo
+(function () {
+  const tabs = Array.from(document.querySelectorAll<HTMLButtonElement>(".proceso-tab"));
+  const descs = Array.from(document.querySelectorAll<HTMLElement>(".proceso-desc"));
+  const prevBtn = document.querySelector<HTMLButtonElement>("#proceso-prev");
+  const nextBtn = document.querySelector<HTMLButtonElement>("#proceso-next");
+  if (!tabs.length) return;
+  let current = 0;
+
+  function goTo(i: number) {
+    tabs[current].classList.remove("active");
+    descs[current].classList.remove("active");
+    current = i;
+    tabs[current].classList.add("active");
+    descs[current].classList.add("active");
+    if (prevBtn) prevBtn.disabled = current === 0;
+    if (nextBtn) nextBtn.disabled = current === tabs.length - 1;
+  }
+
+  tabs.forEach((tab, i) => tab.addEventListener("click", () => goTo(i)));
+  prevBtn?.addEventListener("click", () => goTo(current - 1));
+  nextBtn?.addEventListener("click", () => goTo(current + 1));
+})();
 
 // Formulario de contacto
 const form = document.querySelector<HTMLFormElement>("#contact-form");

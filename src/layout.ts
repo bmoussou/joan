@@ -12,8 +12,8 @@ export function renderHeader(page: Page) {
     </a>
     <nav id="main-nav" aria-label="Navegación principal">
       <a href="/"${page === "main" ? ' class="active"' : ""}>Inicio</a>
-      <a href="/quien-soy.html"${page === "sobre" ? ' class="active"' : ""}>Sobre mí</a>
-      <a href="/como-funciona.html"${page === "como" ? ' class="active"' : ""}>Cómo funciona</a>
+      <a href="${page === "main" ? "#sobre-mi" : "/#sobre-mi"}"${page === "sobre" ? ' class="active"' : ""}>Sobre mí</a>
+      <a href="${page === "main" ? "#como-funciona" : "/#como-funciona"}"${page === "como" ? ' class="active"' : ""}>Cómo funciona</a>
       <a href="${page === "main" ? "#contacto" : "/#contacto"}">Contacto</a>
     </nav>
     <div class="header-actions">

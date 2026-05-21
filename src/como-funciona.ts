@@ -51,34 +51,34 @@ app.innerHTML = `
           </p>
         </div>
 
-        <div class="proceso-grid reveal">
-          <div class="proceso-card">
-            <div class="proceso-num">01</div>
-            <div class="proceso-content">
-              <h3>Primera sesión</h3>
-              <p>Un espacio para conocernos y entender qué te preocupa. Gratis y sin compromiso. Valoramos juntos si este acompañamiento es lo que necesitas.</p>
-            </div>
+        <div class="proceso-interactive reveal">
+          <div class="proceso-tabs">
+            <button class="proceso-tab active" data-step="0">
+              <span class="proceso-tab-num">01</span>
+              <span class="proceso-tab-label">Primera sesión</span>
+            </button>
+            <button class="proceso-tab" data-step="1">
+              <span class="proceso-tab-num">02</span>
+              <span class="proceso-tab-label">Definir objetivos</span>
+            </button>
+            <button class="proceso-tab" data-step="2">
+              <span class="proceso-tab-num">03</span>
+              <span class="proceso-tab-label">Acompañamiento en el proceso</span>
+            </button>
+            <button class="proceso-tab" data-step="3">
+              <span class="proceso-tab-num">04</span>
+              <span class="proceso-tab-label">Seguimiento y cierre</span>
+            </button>
           </div>
-          <div class="proceso-card">
-            <div class="proceso-num">02</div>
-            <div class="proceso-content">
-              <h3>Análisis y objetivos</h3>
-              <p>Definimos juntos hacia dónde quieres ir y qué necesitas trabajar.</p>
-            </div>
+          <div class="proceso-desc-wrap">
+            <p class="proceso-desc active">Recogemos información para comprender tus necesidades y valorar si este acompañamiento encaja contigo.</p>
+            <p class="proceso-desc">Exploramos qué hay detrás de lo que sientes y construimos juntos una dirección clara hacia donde quieres avanzar.</p>
+            <p class="proceso-desc">Trabajamos dentro y fuera de sesión para acercarte a tus objetivos, acompañando también los imprevistos, bloqueos y retos del día a día.</p>
+            <p class="proceso-desc">El objetivo no es que dependas de la terapia, sino que puedas sostener tus avances por ti mismo. Que Relleu sea un apoyo en el camino, no un ancla.</p>
           </div>
-          <div class="proceso-card">
-            <div class="proceso-num">03</div>
-            <div class="proceso-content">
-              <h3>Acompañamiento terapéutico</h3>
-              <p>Sesión a sesión iremos avanzando, integrando herramientas y generando cambios reales.</p>
-            </div>
-          </div>
-          <div class="proceso-card">
-            <div class="proceso-num">04</div>
-            <div class="proceso-content">
-              <h3>Consolidación</h3>
-              <p>El objetivo no es depender de la terapia, sino que puedas sostener tus avances por ti mismo.</p>
-            </div>
+          <div class="proceso-nav">
+            <button class="proceso-nav-btn" id="proceso-prev" disabled>← Anterior</button>
+            <button class="proceso-nav-btn" id="proceso-next">Siguiente →</button>
           </div>
         </div>
       </div>
@@ -109,3 +109,27 @@ app.innerHTML = `
 `;
 
 initSharedJS();
+
+// Proceso interactivo
+(function () {
+  const tabs = Array.from(document.querySelectorAll<HTMLButtonElement>(".proceso-tab"));
+  const descs = Array.from(document.querySelectorAll<HTMLElement>(".proceso-desc"));
+  const prevBtn = document.querySelector<HTMLButtonElement>("#proceso-prev");
+  const nextBtn = document.querySelector<HTMLButtonElement>("#proceso-next");
+  if (!tabs.length) return;
+  let current = 0;
+
+  function goTo(i: number) {
+    tabs[current].classList.remove("active");
+    descs[current].classList.remove("active");
+    current = i;
+    tabs[current].classList.add("active");
+    descs[current].classList.add("active");
+    if (prevBtn) prevBtn.disabled = current === 0;
+    if (nextBtn) nextBtn.disabled = current === tabs.length - 1;
+  }
+
+  tabs.forEach((tab, i) => tab.addEventListener("click", () => goTo(i)));
+  prevBtn?.addEventListener("click", () => goTo(current - 1));
+  nextBtn?.addEventListener("click", () => goTo(current + 1));
+})();
