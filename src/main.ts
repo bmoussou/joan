@@ -150,27 +150,51 @@ app.innerHTML = `
             <p class="proceso-desc">El objetivo no es que dependas de la terapia, sino que puedas sostener tus avances por ti mismo. Que Relleu sea un apoyo en el camino, no un ancla.</p>
           </div>
           <div class="proceso-nav">
-            <button class="proceso-nav-btn" id="proceso-prev" disabled>← Anterior</button>
-            <button class="proceso-nav-btn" id="proceso-next">Siguiente →</button>
+            <button class="proceso-nav-btn" id="proceso-prev" disabled aria-label="Anterior">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <div class="proceso-dots">
+              <span class="proceso-dot active"></span>
+              <span class="proceso-dot"></span>
+              <span class="proceso-dot"></span>
+              <span class="proceso-dot"></span>
+            </div>
+            <button class="proceso-nav-btn" id="proceso-next" aria-label="Siguiente">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CÓMO FUNCIONA — DURACIÓN Y PRECIO -->
-    <section class="section" id="precio">
+    <!-- ¿CÓMO REALIZAREMOS LAS SESIONES? -->
+    <section class="section" id="sesiones">
       <div class="container">
+        <div class="section-header reveal">
+          <p class="eyebrow">Las sesiones</p>
+          <h2>¿Cómo realizaremos las sesiones?</h2>
+        </div>
+        <div class="reveal" style="max-width: 680px; margin: 0 auto 3rem; text-align: center; display: grid; gap: 1rem;">
+          <p style="font-size: 0.97rem; color: var(--muted); line-height: 1.8;">Como opositor que he sido, sé el valor que tiene el tiempo durante una oposición. Por eso, para ponértelo más fácil, las sesiones serán online, para que puedas cuidarte sin añadir más desplazamientos ni complicaciones.</p>
+          <p style="font-size: 0.97rem; color: var(--muted); line-height: 1.8;">Valoraremos juntos si necesitas un acompañamiento semanal o quincenal, adaptándolo siempre a tu ritmo, tu momento y tus necesidades.</p>
+        </div>
         <div class="pricing-pair reveal">
           <div class="pricing-info-card">
-            <p class="eyebrow">Duración</p>
-            <h3>¿Cuánto tiempo durará?</h3>
-            <p>Cada proceso es único y decirte que durará <em>x</em> sesiones sería mentirte. Durará lo que tú necesites.</p>
-            <p>En Relleu vemos la psicología como un punto de apoyo para empoderarte, no como un acompañamiento eterno e innecesario.</p>
+            <p class="eyebrow">Primera sesión</p>
+            <div class="precio-display">
+              <span style="font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 700; color: var(--brand); line-height: 1;">Gratis</span>
+            </div>
+            <p>Un primer espacio para conocernos, entender tu momento y que puedas valorar con calma, y sin compromiso, si este acompañamiento es para ti.</p>
           </div>
           <div class="pricing-info-card pricing-info-card-dark">
-            <p class="eyebrow" style="color: var(--brand-light)">Precio</p>
-            <p style="color: var(--dark-muted); font-size: 0.9rem; line-height: 1.75;">¿Cuánto cuesta? En la página de precios encontrarás toda la información sobre tarifas y modalidades.</p>
-            <a class="btn" href="/precios" style="margin-top: 0.5rem">Ver precios</a>
+            <p class="eyebrow" style="color: var(--brand-light)">Sesiones</p>
+            <span style="font-size: 0.78rem; color: var(--dark-muted); letter-spacing: 0.02em;">A partir de</span>
+            <div class="precio-display">
+              <span class="precio-euro">40€</span>
+              <span style="color: var(--dark-muted); font-size: 0.88rem">/ sesión</span>
+            </div>
+            <p style="color: var(--dark-muted); font-size: 0.88rem; line-height: 1.7;">Primera sesión gratuita · Pack de 4 sesiones disponible</p>
+            <a class="btn" href="/precios.html" style="margin-top: auto">Consultar tarifas</a>
           </div>
         </div>
       </div>
@@ -222,7 +246,7 @@ app.innerHTML = `
           </div>
           <div class="form-group">
             <label for="oposicion">¿Qué oposición estás realizando?</label>
-            <input id="oposicion" name="oposicion" type="text" placeholder="PIR, MIR, EIR..." required />
+            <input id="oposicion" name="oposicion" type="text" placeholder="Mossos d'Esquadra, Educación, Sanidad, Administración…" required />
           </div>
           <div class="form-group">
             <label for="mensaje">¿Qué buscas en este acompañamiento?</label>
@@ -244,6 +268,7 @@ initSharedJS();
 (function () {
   const tabs = Array.from(document.querySelectorAll<HTMLButtonElement>(".proceso-tab"));
   const descs = Array.from(document.querySelectorAll<HTMLElement>(".proceso-desc"));
+  const dots = Array.from(document.querySelectorAll<HTMLElement>(".proceso-dot"));
   const prevBtn = document.querySelector<HTMLButtonElement>("#proceso-prev");
   const nextBtn = document.querySelector<HTMLButtonElement>("#proceso-next");
   if (!tabs.length) return;
@@ -252,9 +277,11 @@ initSharedJS();
   function goTo(i: number) {
     tabs[current].classList.remove("active");
     descs[current].classList.remove("active");
+    dots[current]?.classList.remove("active");
     current = i;
     tabs[current].classList.add("active");
     descs[current].classList.add("active");
+    dots[current]?.classList.add("active");
     if (prevBtn) prevBtn.disabled = current === 0;
     if (nextBtn) nextBtn.disabled = current === tabs.length - 1;
   }

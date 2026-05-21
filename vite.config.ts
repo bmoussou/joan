@@ -7,6 +7,7 @@ export default defineConfig({
         main: "index.html",
         quienSoy: "quien-soy.html",
         comoFunciona: "como-funciona.html",
+        precios: "precios.html",
       },
     },
   },

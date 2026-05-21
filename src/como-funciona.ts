@@ -77,8 +77,18 @@ app.innerHTML = `
             <p class="proceso-desc">El objetivo no es que dependas de la terapia, sino que puedas sostener tus avances por ti mismo. Que Relleu sea un apoyo en el camino, no un ancla.</p>
           </div>
           <div class="proceso-nav">
-            <button class="proceso-nav-btn" id="proceso-prev" disabled>← Anterior</button>
-            <button class="proceso-nav-btn" id="proceso-next">Siguiente →</button>
+            <button class="proceso-nav-btn" id="proceso-prev" disabled aria-label="Anterior">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <div class="proceso-dots">
+              <span class="proceso-dot active"></span>
+              <span class="proceso-dot"></span>
+              <span class="proceso-dot"></span>
+              <span class="proceso-dot"></span>
+            </div>
+            <button class="proceso-nav-btn" id="proceso-next" aria-label="Siguiente">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </button>
           </div>
         </div>
       </div>
@@ -114,6 +124,7 @@ initSharedJS();
 (function () {
   const tabs = Array.from(document.querySelectorAll<HTMLButtonElement>(".proceso-tab"));
   const descs = Array.from(document.querySelectorAll<HTMLElement>(".proceso-desc"));
+  const dots = Array.from(document.querySelectorAll<HTMLElement>(".proceso-dot"));
   const prevBtn = document.querySelector<HTMLButtonElement>("#proceso-prev");
   const nextBtn = document.querySelector<HTMLButtonElement>("#proceso-next");
   if (!tabs.length) return;
@@ -122,9 +133,11 @@ initSharedJS();
   function goTo(i: number) {
     tabs[current].classList.remove("active");
     descs[current].classList.remove("active");
+    dots[current]?.classList.remove("active");
     current = i;
     tabs[current].classList.add("active");
     descs[current].classList.add("active");
+    dots[current]?.classList.add("active");
     if (prevBtn) prevBtn.disabled = current === 0;
     if (nextBtn) nextBtn.disabled = current === tabs.length - 1;
   }

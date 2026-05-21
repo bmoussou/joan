@@ -1,4 +1,4 @@
-type Page = "main" | "sobre" | "como";
+type Page = "main" | "sobre" | "como" | "precios";
 
 export function renderHeader(page: Page) {
   return `
@@ -14,6 +14,7 @@ export function renderHeader(page: Page) {
       <a href="/"${page === "main" ? ' class="active"' : ""}>Inicio</a>
       <a href="${page === "main" ? "#sobre-mi" : "/#sobre-mi"}"${page === "sobre" ? ' class="active"' : ""}>Sobre mí</a>
       <a href="${page === "main" ? "#como-funciona" : "/#como-funciona"}"${page === "como" ? ' class="active"' : ""}>Cómo funciona</a>
+      <a href="/precios.html"${page === "precios" ? ' class="active"' : ""}>Precios</a>
       <a href="${page === "main" ? "#contacto" : "/#contacto"}">Contacto</a>
     </nav>
     <div class="header-actions">
@@ -37,8 +38,9 @@ export const renderFooter = `
       </div>
       <nav class="footer-nav" aria-label="Navegación pie">
         <a href="/">Inicio</a>
-        <a href="/quien-soy.html">Sobre mí</a>
-        <a href="/como-funciona.html">Cómo funciona</a>
+        <a href="/#sobre-mi">Sobre mí</a>
+        <a href="/#como-funciona">Cómo funciona</a>
+        <a href="/precios.html">Precios</a>
         <a href="/#contacto">Contacto</a>
       </nav>
       <div class="footer-contact">
