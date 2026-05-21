@@ -22,42 +22,20 @@ app.innerHTML = `
     <section class="section" id="bases">
       <div class="container">
         <div class="section-header reveal">
-          <p class="eyebrow">La forma de trabajar</p>
-          <h2>Construimos juntos las herramientas<br>que realmente te sirvan.</h2>
-          <p class="section-lead">
-            Tú eres quien mejor se conoce. Mi trabajo es escucharte, adaptarme a ti
-            y acompañarte a encontrar una forma más sostenible de vivir el proceso.
-          </p>
+          <p class="eyebrow">El acompañamiento</p>
+          <h2>¿En qué consiste el acompañamiento?</h2>
         </div>
 
-        <div class="bases-grid reveal">
-          <div class="base-card">
-            <div class="base-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253"/>
-              </svg>
-            </div>
-            <h3>Sin juicios</h3>
-            <p>Un espacio seguro donde puedes ser tú mismo. Lo que sientes tiene sentido, aunque a veces no lo parezca.</p>
+        <div class="reveal" style="max-width: 680px; margin: 0 auto; text-align: center; display: grid; gap: 1.6rem;">
+          <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(1.25rem, 2.2vw, 1.6rem); color: var(--brand); line-height: 1.55; font-weight: 600;">Un espacio seguro donde puedes ser tú mismo, entenderte mejor y construir una forma de vivir (y opositar) más sostenible.</p>
+          <p style="font-size: 0.97rem; color: var(--muted); line-height: 1.8;">La forma de acompañar se basará en escucharte, adaptarme a ti y ayudarte a construir herramientas que realmente te sirvan. Partiendo de una idea clave, tú eres quien mejor se conoce.</p>
+          <p style="font-size: 0.97rem; color: var(--muted); line-height: 1.8;">En Relleu trabajamos desde un enfoque cercano, práctico y basado en la evidencia. Pero, sobre todo, humano.</p>
+          <div class="hero-tags" style="justify-content: center;">
+            <span>Sin juicios</span>
+            <span>Sin presiones</span>
+            <span>A tu ritmo</span>
           </div>
-          <div class="base-card">
-            <div class="base-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/>
-              </svg>
-            </div>
-            <h3>Sin presiones</h3>
-            <p>La terapia se adapta a tu ritmo, no al revés. No hay una velocidad correcta para mejorar.</p>
-          </div>
-          <div class="base-card">
-            <div class="base-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z"/>
-              </svg>
-            </div>
-            <h3>A tu ritmo</h3>
-            <p>Cada proceso es único. Definimos juntos el camino y lo ajustamos según cómo vayas avanzando.</p>
-          </div>
+          <p style="font-size: 0.97rem; color: var(--muted); line-height: 1.8;">La terapia es un espacio seguro donde puedes ser tú mismo, entenderte mejor y construir una forma de vivir (y opositar) más sostenible.</p>
         </div>
       </div>
     </section>
@@ -67,9 +45,9 @@ app.innerHTML = `
       <div class="container">
         <div class="section-header reveal">
           <p class="eyebrow" style="color: var(--brand-light)">El proceso</p>
-          <h2 style="color: var(--dark-text)">Cómo será tu acompañamiento.</h2>
+          <h2 style="color: var(--dark-text)">¿Cómo será tu proceso?</h2>
           <p class="section-lead" style="color: var(--dark-muted)">
-            Cada proceso es distinto, pero generalmente seguimos estos pasos.
+            Cada proceso es único, pero generalmente seguimos estos pasos:
           </p>
         </div>
 
@@ -85,21 +63,21 @@ app.innerHTML = `
             <div class="proceso-num">02</div>
             <div class="proceso-content">
               <h3>Análisis y objetivos</h3>
-              <p>Entendemos qué hay detrás de lo que sientes y definimos juntos hacia dónde quieres ir. Sin prisas, con claridad.</p>
+              <p>Definimos juntos hacia dónde quieres ir y qué necesitas trabajar.</p>
             </div>
           </div>
           <div class="proceso-card">
             <div class="proceso-num">03</div>
             <div class="proceso-content">
               <h3>Acompañamiento terapéutico</h3>
-              <p>Sesión a sesión, trabajamos con herramientas concretas y adaptadas a ti. No solo hablar: aprender a moverse desde lo que importa.</p>
+              <p>Sesión a sesión iremos avanzando, integrando herramientas y generando cambios reales.</p>
             </div>
           </div>
           <div class="proceso-card">
             <div class="proceso-num">04</div>
             <div class="proceso-content">
               <h3>Consolidación</h3>
-              <p>El objetivo final no es depender de la terapia, sino que puedas sostener tus avances por ti mismo. Que Relleu sea un punto de apoyo, no un ancla.</p>
+              <p>El objetivo no es depender de la terapia, sino que puedas sostener tus avances por ti mismo.</p>
             </div>
           </div>
         </div>
@@ -118,13 +96,8 @@ app.innerHTML = `
           </div>
           <div class="pricing-info-card pricing-info-card-dark">
             <p class="eyebrow" style="color: var(--brand-light)">Precio</p>
-            <div class="precio-display">
-              <span class="precio-gratis">Gratis</span>
-              <span class="precio-sep">/</span>
-              <span class="precio-euro">40€</span>
-            </div>
-            <p style="color: var(--dark-muted)">Primera sesión sin coste · Sesiones regulares de 1 hora · Solo online</p>
-            <a class="btn" href="/#contacto" style="margin-top: 0.5rem">Reservar primera sesión</a>
+            <p style="color: var(--dark-muted); font-size: 0.9rem; line-height: 1.75;">¿Cuánto cuesta? En la página de precios encontrarás toda la información sobre tarifas y modalidades.</p>
+            <a class="btn" href="/precios" style="margin-top: 0.5rem">Ver precios</a>
           </div>
         </div>
       </div>

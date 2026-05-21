@@ -54,12 +54,6 @@ app.innerHTML = `
               <p>Sigo formándome de manera continua para ofrecer una atención actualizada y de calidad. Próximamente me especializaré en terapias contextuales como la Terapia de Aceptación y Compromiso (ACT).</p>
               <p>Pero más allá de la formación, hay algo que guía mi forma de trabajar: la flexibilidad. Me apoyo en la evidencia científica, pero no creo en enfoques rígidos. Cada persona es distinta, y la terapia también debe serlo.</p>
             </div>
-            <div class="info-tags">
-              <span>Grado en Psicología (UB)</span>
-              <span>Beca excelencia académica</span>
-              <span>PIR #591</span>
-              <span>Modelo ACT</span>
-            </div>
           </div>
 
           <div class="info-block reveal" style="--delay:100ms">
@@ -70,11 +64,6 @@ app.innerHTML = `
               <p>He trabajado en el CSMIJ de Horta y Guinardó (Centro de Salud Mental Infantil y Juvenil). Allí aprendí a intervenir en situaciones de alta complejidad, a gestionar bloqueos, ansiedad y desregulación emocional.</p>
               <p>Actualmente formo parte del proyecto PsicoJove, un servicio municipal de atención psicológica para jóvenes de 12 a 30 años, acompañando a personas que atraviesan momentos de ansiedad, desmotivación o presión, desde un enfoque práctico y adaptado a cada caso.</p>
               <p>Todo esto ha dado forma a mi manera de trabajar: ayudarte a manejar la presión, comprender qué hay detrás de tus bloqueos y encontrar una forma más sostenible de afrontar el proceso.</p>
-            </div>
-            <div class="info-tags">
-              <span>CSMIJ Horta-Guinardó</span>
-              <span>PsicoJove</span>
-              <span>Jóvenes 12-30 años</span>
             </div>
           </div>
 

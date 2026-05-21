@@ -1142,6 +1142,8 @@ input:focus, textarea:focus {
 .section-dark .contact-link:hover { color: var(--dark-text); }
 .section-dark .contact-link svg { color: var(--brand-light); }
 
+.section-dark .prose p { color: #c8b4a8; }
+
 /* ══════════════════════════════════
    QUIEN SOY PAGE
 ══════════════════════════════════ */
