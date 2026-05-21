@@ -350,6 +350,41 @@ initSharedJS();
   nextBtn?.addEventListener("click", () => goTo(current + 1));
 })();
 
+// Nav activo según sección visible
+(function () {
+  const sectionToNav: Record<string, string> = {
+    inicio:        "/",
+    "sobre-mi":    "#sobre-mi",
+    formacion:     "#sobre-mi",
+    "como-funciona": "#como-funciona",
+    "para-mi":     "#como-funciona",
+    proceso:       "#como-funciona",
+    sesiones:      "#como-funciona",
+    contacto:      "#contacto",
+  };
+
+  const navLinks = Array.from(document.querySelectorAll<HTMLAnchorElement>("#main-nav a"));
+
+  function setActive(navHref: string) {
+    navLinks.forEach(link =>
+      link.classList.toggle("active", link.getAttribute("href") === navHref)
+    );
+  }
+
+  function update() {
+    const scrollY = window.scrollY + 140;
+    let current = "/";
+    for (const [id, href] of Object.entries(sectionToNav)) {
+      const el = document.getElementById(id);
+      if (el && el.offsetTop <= scrollY) current = href;
+    }
+    setActive(current);
+  }
+
+  window.addEventListener("scroll", update, { passive: true });
+  update();
+})();
+
 // Formulario de contacto
 const form = document.querySelector<HTMLFormElement>("#contact-form");
 if (form) {
