@@ -13,7 +13,7 @@ app.innerHTML = `
     <section class="page-hero">
       <div class="container page-hero-inner reveal">
         <div class="page-hero-avatar">
-          <img src="/fotoJoan2.jpg" alt="Joan Agudo Ramon" />
+          <img src="/joan.jpg" alt="Joan Agudo Ramon" />
         </div>
         <p class="eyebrow">Sobre mí</p>
         <h1>Joan Agudo Ramon</h1>
@@ -29,45 +29,44 @@ app.innerHTML = `
         <div class="prose">
           <p class="prose-lead">Psicólogo y opositor PIR.</p>
           <p>Este enero me presenté al PIR, un examen en el que más de 4.000 personas compiten por poco más de 270 plazas. Y sí… fue duro.</p>
-          <p>Duro de decir muchos «no» a cosas que me apetecían.<br>
-          Duro de estudiar seis o siete días a la semana, durante infinitas horas.<br>
-          Duro de hacer simulacros malos y dudar de todo.<br>
-          Duro de sentir frustración, rabia… y, muchas veces, soledad.</p>
-          <p>Pero hay algo que al final acabé entendiendo: no todo es estudiar más. Había días en los que, por mucho que me pusiera, no rendía. Días en los que las horas no sumaban… sino que solo aumentaban la ansiedad y el bloqueo.</p>
-          <p>Y aquí es donde todo cambia.</p>
-          <p>Porque opositar no es solo una cuestión de conocimiento. Es una cuestión de cómo estás.</p>
-          <p>De ahí nace Relleu. Un espacio dentro del caos que supone una oposición, un espacio donde poder parar, entender qué te pasa y volver a avanzar. Un espacio para cuidar tu mente, sostener la presión y hacer que el proceso sea más llevadero.</p>
+          <p>Duro decir muchos "no" a planes que me apetecían.<br>
+          Duro estudiar seis o siete días a la semana durante infinitas horas.<br>
+          Duro hacer simulacros malos y dudar de todo.<br>
+          Duro sentir frustración, rabia y, muchas veces, soledad.</p>
+          <p>Pero hubo algo que acabé entendiendo: no todo consiste en estudiar más.</p>
+          <p>Había días en los que, por mucho que me sentara delante de los apuntes, no rendía. Días en los que las horas no sumaban, sino que solo aumentaban la ansiedad, el bloqueo y la sensación de no llegar.</p>
+          <p>Y ahí es donde todo cambia.</p>
+          <p>Porque opositar no es solo una cuestión de conocimiento. También es una cuestión de cómo estás.</p>
+          <p>De esa idea nace Relleu: un espacio dentro del caos que supone una oposición. Un lugar donde parar, entender qué te pasa y volver a avanzar. Un espacio para cuidar tu mente, sostener la presión y hacer que el proceso sea un poco más llevadero.</p>
         </div>
       </div>
     </section>
 
     <!-- FORMACIÓN + EXPERIENCIA -->
-    <section class="section" id="formacion">
-      <div class="container">
-        <div class="two-col-section">
+    <section class="section" id="formacion" style="padding: 0;">
+      <div class="two-col-section" style="gap: 0; align-items: stretch;">
 
-          <div class="info-block reveal">
-            <p class="eyebrow">Mi formación</p>
-            <h2 class="info-h2">Preparado para acompañarte.</h2>
-            <div class="prose">
-              <p>Soy psicólogo graduado por la Universidad de Barcelona, donde fui becado por excelencia académica. También he preparado el PIR, obteniendo la posición 591 en la convocatoria de 2026, entre más de 4.000 personas.</p>
-              <p>Sigo formándome de manera continua para ofrecer una atención actualizada y de calidad. Próximamente me especializaré en terapias contextuales como la Terapia de Aceptación y Compromiso (ACT).</p>
-              <p>Pero más allá de la formación, hay algo que guía mi forma de trabajar: la flexibilidad. Me apoyo en la evidencia científica, pero no creo en enfoques rígidos. Cada persona es distinta, y la terapia también debe serlo.</p>
-            </div>
+        <div class="info-block reveal" style="background: var(--surface); padding: 4rem 3rem;">
+          <p class="eyebrow">Mi formación</p>
+          <h2 class="info-h2">Preparado para acompañarte.</h2>
+          <div class="prose">
+            <p>Soy psicólogo graduado por la Universidad de Barcelona, donde fui becado por excelencia académica. También he preparado el PIR, obteniendo la posición 591 en la convocatoria de 2026, entre más de 4.000 personas.</p>
+            <p>Sigo formándome de manera continua para ofrecer una atención actualizada y de calidad. Próximamente me especializaré en terapias contextuales como la Terapia de Aceptación y Compromiso (ACT).</p>
+            <p>Pero más allá de la formación, hay algo que guía mi forma de trabajar: la flexibilidad. Me apoyo en la evidencia científica, pero no creo en enfoques rígidos. Cada persona es distinta, y la terapia también debe serlo.</p>
           </div>
-
-          <div class="info-block reveal" style="--delay:100ms">
-            <p class="eyebrow">Mi experiencia</p>
-            <h2 class="info-h2">Lo que me ha dado forma.</h2>
-            <div class="prose">
-              <p>Escribiendo esto me he dado cuenta de que mi experiencia tiene algo en común: trabajar con personas que, como tú, están intentando sostenerse en contextos exigentes.</p>
-              <p>He trabajado en el CSMIJ de Horta y Guinardó (Centro de Salud Mental Infantil y Juvenil). Allí aprendí a intervenir en situaciones de alta complejidad, a gestionar bloqueos, ansiedad y desregulación emocional.</p>
-              <p>Actualmente formo parte del proyecto PsicoJove, un servicio municipal de atención psicológica para jóvenes de 12 a 30 años, acompañando a personas que atraviesan momentos de ansiedad, desmotivación o presión, desde un enfoque práctico y adaptado a cada caso.</p>
-              <p>Todo esto ha dado forma a mi manera de trabajar: ayudarte a manejar la presión, comprender qué hay detrás de tus bloqueos y encontrar una forma más sostenible de afrontar el proceso.</p>
-            </div>
-          </div>
-
         </div>
+
+        <div class="info-block reveal" style="background: var(--brand); color: #fff; padding: 4rem 3rem; --delay:100ms;">
+          <p class="eyebrow" style="color: rgba(255,255,255,0.7)">Mi experiencia</p>
+          <h2 class="info-h2" style="color: #fff">Lo que me ha dado forma.</h2>
+          <div class="prose" style="color: rgba(255,255,255,0.88)">
+            <p>Escribiendo esto me he dado cuenta de que mi experiencia tiene algo en común: trabajar con personas que, como tú, están intentando sostenerse en contextos exigentes.</p>
+            <p>He trabajado en el CSMIJ de Horta y Guinardó (Centro de Salud Mental Infantil y Juvenil). Allí aprendí a intervenir en situaciones de alta complejidad, a gestionar bloqueos, ansiedad y desregulación emocional.</p>
+            <p>Actualmente formo parte del proyecto PsicoJove, un servicio municipal de atención psicológica para jóvenes de 12 a 30 años, acompañando a personas que atraviesan momentos de ansiedad, desmotivación o presión, desde un enfoque práctico y adaptado a cada caso.</p>
+            <p>Todo esto ha dado forma a mi manera de trabajar: ayudarte a manejar la presión, comprender qué hay detrás de tus bloqueos y encontrar una forma más sostenible de afrontar el proceso.</p>
+          </div>
+        </div>
+
       </div>
     </section>
 

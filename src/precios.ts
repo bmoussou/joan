@@ -14,7 +14,7 @@ app.innerHTML = `
       <div class="container page-hero-inner reveal">
         <p class="eyebrow">Tarifas</p>
         <h1>Precios</h1>
-        <p class="page-hero-sub">Sin letra pequeña. Sin sorpresas.</p>
+        <p class="page-hero-sub"></p>
       </div>
     </section>
 
@@ -25,12 +25,13 @@ app.innerHTML = `
         <div class="precios-grid reveal">
 
           <div class="precio-card">
-            <p class="eyebrow">Para empezar</p>
-            <div class="precio-card-price">
-              <span class="precio-big">Gratis</span>
+            <p class="eyebrow">Primera sesión al 50%</p>
+            <div class="precio-card-price" style="display: flex; align-items: baseline; gap: 0.5rem;">
+              <span class="precio-big">25€</span>
+              <span style="font-size: 0.95rem; color: var(--muted); text-decoration: line-through;">50€</span>
             </div>
             <h3>Primera sesión</h3>
-            <p>Un primer espacio para conocernos, entender tu momento y que puedas valorar con calma, y sin compromiso, si este acompañamiento es para ti.</p>
+            <p>Un primer espacio para conocernos, entender tu momento y valorar con calma si este acompañamiento es para ti.</p>
             <a class="btn btn-ghost" href="/#contacto" style="margin-top: auto">Reservar ahora</a>
           </div>
 

@@ -36,7 +36,7 @@ app.innerHTML = `
               &ldquo;Estar bien con uno mismo no es suficiente para aprobar una oposición, pero sí es una condición necesaria para poder intentarlo.&rdquo;
             </blockquote>
             <div class="quote-author">
-              <div class="quote-avatar"><img src="/fotoJoan2.jpg" alt="Joan Agudo Ramon" /></div>
+              <div class="quote-avatar"><img src="/joan.jpg" alt="Joan Agudo Ramon" /></div>
               <div>
                 <strong>Joan Agudo Ramon</strong>
                 <span>Psicólogo</span>
@@ -53,41 +53,11 @@ app.innerHTML = `
         <p class="eyebrow" style="color: var(--brand-light)">Mi historia</p>
         <h2 class="prose-h2">Hola, soy Joan.</h2>
         <div class="prose">
-          <p class="prose-lead">Hola!! Soy Joan, psicólogo…</p>
           <p>Y bueno, se podría decir que sé lo que significa estar dentro de una oposición… Es un camino que te exige mucho más de lo que se ve; constancia en los días buenos, resistencia en los días malos y, sobre todo, convivir con la incertidumbre…</p>
           <p>Esa experiencia te hace vivir de otra manera; la presión, las dudas, el cansancio mental y esa sensación de que nunca es suficiente.</p>
           <p>Y por eso nace Relleu: un espacio para poder parar, ordenar lo que estás viviendo y poder darte el espacio que te está quitando la oposición.</p>
         </div>
-      </div>
-    </section>
-
-    <!-- SOBRE MÍ — FORMACIÓN + EXPERIENCIA -->
-    <section class="section" id="formacion">
-      <div class="container">
-        <div class="two-col-section">
-
-          <div class="info-block reveal">
-            <p class="eyebrow">Mi formación</p>
-            <h2 class="info-h2">Preparado para acompañarte.</h2>
-            <div class="prose">
-              <p>Soy psicólogo graduado por la Universidad de Barcelona, donde fui becado por excelencia académica. También he preparado el PIR, obteniendo la posición 591 en la convocatoria de 2026, entre más de 4.000 personas.</p>
-              <p>Sigo formándome de manera continua para ofrecer una atención actualizada y de calidad. Próximamente me especializaré en terapias contextuales como la Terapia de Aceptación y Compromiso (ACT).</p>
-              <p>Pero más allá de la formación, hay algo que guía mi forma de trabajar: la flexibilidad. Me apoyo en la evidencia científica, pero no creo en enfoques rígidos. Cada persona es distinta, y la terapia también debe serlo.</p>
-            </div>
-          </div>
-
-          <div class="info-block reveal" style="--delay:100ms">
-            <p class="eyebrow">Mi experiencia</p>
-            <h2 class="info-h2">Lo que me ha dado forma.</h2>
-            <div class="prose">
-              <p>Escribiendo esto me he dado cuenta de que mi experiencia tiene algo en común: trabajar con personas que, como tú, están intentando sostenerse en contextos exigentes.</p>
-              <p>He trabajado en el CSMIJ de Horta y Guinardó (Centro de Salud Mental Infantil y Juvenil). Allí aprendí a intervenir en situaciones de alta complejidad, a gestionar bloqueos, ansiedad y desregulación emocional.</p>
-              <p>Actualmente formo parte del proyecto PsicoJove, un servicio municipal de atención psicológica para jóvenes de 12 a 30 años, acompañando a personas que atraviesan momentos de ansiedad, desmotivación o presión, desde un enfoque práctico y adaptado a cada caso.</p>
-              <p>Todo esto ha dado forma a mi manera de trabajar: ayudarte a manejar la presión, comprender qué hay detrás de tus bloqueos y encontrar una forma más sostenible de afrontar el proceso.</p>
-            </div>
-          </div>
-
-        </div>
+        <a href="/quien-soy" class="btn btn-primary" style="margin-top: 2rem">¡Conóceme mejor!</a>
       </div>
     </section>
 
@@ -234,11 +204,12 @@ app.innerHTML = `
         </div>
         <div class="pricing-pair reveal">
           <div class="pricing-info-card">
-            <p class="eyebrow">Primera sesión</p>
-            <div class="precio-display">
-              <span style="font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 700; color: var(--brand); line-height: 1;">Gratis</span>
+            <p class="eyebrow">Primera sesión al 50%</p>
+            <div class="precio-display" style="display: flex; align-items: baseline; gap: 0.5rem;">
+              <span style="font-family: 'Cormorant Garamond', serif; font-size: 3.2rem; font-weight: 700; color: var(--brand); line-height: 1;">25€</span>
+              <span style="font-size: 0.85rem; color: var(--muted); text-decoration: line-through;">50€</span>
             </div>
-            <p>Un primer espacio para conocernos, entender tu momento y que puedas valorar con calma, y sin compromiso, si este acompañamiento es para ti.</p>
+            <p>Un primer espacio para conocernos, entender tu momento y valorar con calma si este acompañamiento es para ti.</p>
           </div>
           <div class="pricing-info-card pricing-info-card-dark">
             <p class="eyebrow" style="color: var(--brand-light)">Sesiones</p>
@@ -250,7 +221,7 @@ app.innerHTML = `
               </div>
             </div>
             <div style="display: flex; flex-direction: column; gap: 0.35rem;">
-              <span style="color: var(--dark-muted); font-size: 0.88rem;">Primera sesión gratuita</span>
+              <span style="color: var(--dark-muted); font-size: 0.88rem;">Primera sesión al 50%</span>
               <span style="color: var(--dark-muted); font-size: 0.88rem;">Pack de 4 sesiones con descuento</span>
             </div>
             <a class="btn" href="/precios.html">Consultar tarifas</a>
@@ -289,7 +260,7 @@ app.innerHTML = `
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
             </svg>
-            Primera consulta gratuita &mdash; sin compromiso
+            Primera sesión al 50%
           </div>
           <div class="form-group">
             <label for="nombre">Nombre y apellidos</label>
@@ -386,15 +357,30 @@ initSharedJS();
 })();
 
 // Formulario de contacto
+const EMAILJS_PUBLIC_KEY  = "D6aaLs4Nq8GnkoaXR";
+const EMAILJS_SERVICE_ID  = "service_gxwhxar";
+const EMAILJS_TEMPLATE_ID = "template_4f9gdkm";
+
+declare const emailjs: { init(opts: { publicKey: string }): void; sendForm(s: string, t: string, f: HTMLFormElement): Promise<unknown> };
+
+emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+
 const form = document.querySelector<HTMLFormElement>("#contact-form");
 if (form) {
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
     const btn = form.querySelector<HTMLButtonElement>("button[type='submit']");
-    if (btn) {
+    if (!btn) return;
+    btn.textContent = "Enviando…";
+    btn.disabled = true;
+    try {
+      await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form);
       btn.textContent = "Enviado. Te respondo pronto.";
-      btn.disabled = true;
       btn.classList.add("btn-success");
+      form.reset();
+    } catch {
+      btn.textContent = "Error al enviar. Inténtalo de nuevo.";
+      btn.disabled = false;
     }
   });
 }
