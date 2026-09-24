@@ -55,7 +55,13 @@ async function resolvePlaceId(key: string): Promise<string> {
       "X-Goog-Api-Key": key,
       "X-Goog-FieldMask": "places.id",
     },
-    body: JSON.stringify({ textQuery: PLACE_QUERY, languageCode: "es", regionCode: "ES" }),
+    body: JSON.stringify({
+      textQuery: PLACE_QUERY,
+      languageCode: "es",
+      regionCode: "ES",
+      // Relleu es online y no tiene dirección pública (solo área de servicio)
+      includePureServiceAreaBusinesses: true,
+    }),
   });
   if (!res.ok) throw new Error(`Places searchText ${res.status}: ${await res.text()}`);
   const data = (await res.json()) as { places?: Array<{ id: string }> };
