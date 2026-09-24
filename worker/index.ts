@@ -48,7 +48,7 @@ async function handleReviews(env: Env, ctx: ExecutionContext): Promise<Response>
     );
     return json(fresh);
   } catch (err) {
-    console.error("[reviews]", err);
+    console.error(`[reviews] ${err instanceof Error ? err.message : String(err)}`);
     // Si Google falla, se sirve la última copia disponible
     if (stale) return json(stale, 200, 300);
     return json({ error: "reviews_unavailable" }, 503);
