@@ -45,6 +45,7 @@ app.innerHTML = `
               </div>
             </div>
           </div>
+          ${renderRatingBadge("mobile")}
           ${renderHeroReview()}
         </div>
       </div>

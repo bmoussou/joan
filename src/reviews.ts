@@ -49,10 +49,10 @@ function fallbackAvatars(root: ParentNode) {
 
 // ── Marcado (estático, se rellena al cargar) ──
 
-/** Insignia de valoración para el hero. */
-export function renderRatingBadge() {
+/** Insignia de valoración para el hero. En móvil se pinta junto a la reseña que rota. */
+export function renderRatingBadge(placement: "desktop" | "mobile" = "desktop") {
   return `
-    <a class="rating-badge" href="#resenas" data-reviews-only>
+    <a class="rating-badge rating-badge-${placement}" href="#resenas" data-reviews-only>
       <span class="rating-badge-avatars" data-reviews-avatars aria-hidden="true"></span>
       <span class="rating-badge-body">
         <span class="rating-badge-top"><span class="rating-badge-score" data-rating-value></span><span data-rating-stars></span></span>

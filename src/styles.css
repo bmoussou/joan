@@ -1988,6 +1988,12 @@ body.reviews-error .reviews-fallback {
   box-shadow: var(--shadow-card);
   transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s, opacity 0.5s;
 }
+/* En móvil la insignia baja debajo de la cita para no separar las reseñas */
+.rating-badge-mobile { display: none; }
+@media (max-width: 860px) {
+  .rating-badge-desktop { display: none; }
+  .rating-badge-mobile { display: inline-flex; align-self: flex-start; margin-top: 0; }
+}
 .rating-badge:hover {
   border-color: var(--brand-light);
   transform: translateY(-2px);
