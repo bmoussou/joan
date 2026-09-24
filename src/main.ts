@@ -1,5 +1,6 @@
 import "./styles.css";
 import { renderHeader, renderFooter, initSharedJS } from "./layout";
+import { renderRatingBadge, renderHeroReview, renderReviewsSection, initReviews } from "./reviews";
 
 const app = document.querySelector<HTMLDivElement>("#app");
 if (!app) throw new Error("No se encontró el contenedor #app");
@@ -26,9 +27,10 @@ app.innerHTML = `
             <p>Por eso nace Relleu: un espacio de acompañamiento emocional para opositores, donde entender lo que te pasa, recuperar el equilibrio y sostener el camino sin dejarte a ti de lado.</p>
           </div>
           <div class="hero-actions">
-            <a class="btn" href="#contacto">Primera consulta gratis</a>
+            <a class="btn" href="#contacto">Empieza tu proceso</a>
             <a class="btn btn-ghost" href="https://wa.me/34619781400" target="_blank" rel="noreferrer">WhatsApp</a>
           </div>
+          ${renderRatingBadge()}
         </div>
         <div class="hero-visual">
           <div class="hero-quote-card">
@@ -43,6 +45,7 @@ app.innerHTML = `
               </div>
             </div>
           </div>
+          ${renderHeroReview()}
         </div>
       </div>
     </section>
@@ -57,7 +60,10 @@ app.innerHTML = `
           <p>Esa experiencia te hace vivir de otra manera; la presión, las dudas, el cansancio mental y esa sensación de que nunca es suficiente.</p>
           <p>Y por eso nace Relleu: un espacio para poder parar, ordenar lo que estás viviendo y poder darte el espacio que te está quitando la oposición.</p>
         </div>
-        <a href="/quien-soy" class="btn btn-primary" style="margin-top: 2rem">¡Conóceme mejor!</a>
+        <div class="btn-row" style="margin-top: 2rem">
+          <a href="/quien-soy" class="btn btn-primary">¡Conóceme mejor!</a>
+          <a href="https://www.linkedin.com/in/joan-agudo-ramon-626a98256/" class="btn btn-linkedin" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg> LinkedIn</a>
+        </div>
       </div>
     </section>
 
@@ -78,7 +84,6 @@ app.innerHTML = `
             <span>Sin presiones</span>
             <span>A tu ritmo</span>
           </div>
-          <p style="font-size: 0.97rem; color: var(--muted); line-height: 1.8;">La terapia es un espacio seguro donde puedes ser tú mismo, entenderte mejor y construir una forma de vivir (y opositar) más sostenible.</p>
         </div>
       </div>
     </section>
@@ -94,37 +99,37 @@ app.innerHTML = `
         <div class="para-mi-grid reveal">
           <div class="para-mi-item">
             <div class="para-mi-icon">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.09 6.26L19 5l-3.74 5.13L22 12l-6.74 1.13L19 19l-5.91-3.26L12 22l-1.09-6.26L5 19l3.74-5.13L2 12l6.74-1.13L5 5z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C12.8 7.5 16.5 11.2 22 12 16.5 12.8 12.8 16.5 12 22 11.2 16.5 7.5 12.8 2 12 7.5 11.2 11.2 7.5 12 2Z"/></svg>
             </div>
             <p>Si todo se hace cuesta arriba</p>
           </div>
           <div class="para-mi-item">
             <div class="para-mi-icon">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.09 6.26L19 5l-3.74 5.13L22 12l-6.74 1.13L19 19l-5.91-3.26L12 22l-1.09-6.26L5 19l3.74-5.13L2 12l6.74-1.13L5 5z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C12.8 7.5 16.5 11.2 22 12 16.5 12.8 12.8 16.5 12 22 11.2 16.5 7.5 12.8 2 12 7.5 11.2 11.2 7.5 12 2Z"/></svg>
             </div>
             <p>Si te sientes perdido con la oposición o contigo mismo</p>
           </div>
           <div class="para-mi-item">
             <div class="para-mi-icon">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.09 6.26L19 5l-3.74 5.13L22 12l-6.74 1.13L19 19l-5.91-3.26L12 22l-1.09-6.26L5 19l3.74-5.13L2 12l6.74-1.13L5 5z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C12.8 7.5 16.5 11.2 22 12 16.5 12.8 12.8 16.5 12 22 11.2 16.5 7.5 12.8 2 12 7.5 11.2 11.2 7.5 12 2Z"/></svg>
             </div>
             <p>Si te agobia cómo conllevar el verano y la oposición</p>
           </div>
           <div class="para-mi-item">
             <div class="para-mi-icon">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.09 6.26L19 5l-3.74 5.13L22 12l-6.74 1.13L19 19l-5.91-3.26L12 22l-1.09-6.26L5 19l3.74-5.13L2 12l6.74-1.13L5 5z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C12.8 7.5 16.5 11.2 22 12 16.5 12.8 12.8 16.5 12 22 11.2 16.5 7.5 12.8 2 12 7.5 11.2 11.2 7.5 12 2Z"/></svg>
             </div>
             <p>Si dudas constantemente de si vas a ser capaz</p>
           </div>
           <div class="para-mi-item">
             <div class="para-mi-icon">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.09 6.26L19 5l-3.74 5.13L22 12l-6.74 1.13L19 19l-5.91-3.26L12 22l-1.09-6.26L5 19l3.74-5.13L2 12l6.74-1.13L5 5z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C12.8 7.5 16.5 11.2 22 12 16.5 12.8 12.8 16.5 12 22 11.2 16.5 7.5 12.8 2 12 7.5 11.2 11.2 7.5 12 2Z"/></svg>
             </div>
             <p>Si notas que necesitas parar, pero no te permites hacerlo</p>
           </div>
           <div class="para-mi-item">
             <div class="para-mi-icon">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.09 6.26L19 5l-3.74 5.13L22 12l-6.74 1.13L19 19l-5.91-3.26L12 22l-1.09-6.26L5 19l3.74-5.13L2 12l6.74-1.13L5 5z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C12.8 7.5 16.5 11.2 22 12 16.5 12.8 12.8 16.5 12 22 11.2 16.5 7.5 12.8 2 12 7.5 11.2 11.2 7.5 12 2Z"/></svg>
             </div>
             <p>Si no sabes si seguir, cambiar o dejarlo</p>
           </div>
@@ -191,6 +196,9 @@ app.innerHTML = `
       </div>
     </section>
 
+    <!-- RESEÑAS -->
+    ${renderReviewsSection()}
+
     <!-- ¿CÓMO REALIZAREMOS LAS SESIONES? -->
     <section class="section" id="sesiones">
       <div class="container">
@@ -247,11 +255,11 @@ app.innerHTML = `
               </svg>
               +34 619 78 14 00
             </a>
-            <a href="mailto:contacto@joanpsicologia.com" class="contact-link">
+            <a href="mailto:relleupsicologia@gmail.com" class="contact-link">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
               </svg>
-              contacto@joanpsicologia.com
+              relleupsicologia@gmail.com
             </a>
           </div>
         </div>
@@ -293,6 +301,7 @@ app.innerHTML = `
 `;
 
 initSharedJS();
+initReviews();
 
 // Proceso interactivo
 (function () {
@@ -330,6 +339,7 @@ initSharedJS();
     "como-funciona": "#como-funciona",
     "para-mi":     "#como-funciona",
     proceso:       "#como-funciona",
+    resenas:       "#como-funciona",
     sesiones:      "#como-funciona",
     contacto:      "#contacto",
   };

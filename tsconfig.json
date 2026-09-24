@@ -12,5 +12,5 @@
     "lib": ["ES2021", "DOM", "DOM.Iterable"],
     "skipLibCheck": true
   },
-  "include": ["src"]
+  "include": ["src", "worker"]
 }

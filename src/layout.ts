@@ -18,7 +18,7 @@ export function renderHeader(page: Page) {
       <a href="${page === "main" ? "#contacto" : "/#contacto"}">Contacto</a>
     </nav>
     <div class="header-actions">
-      <a class="btn btn-small" href="${page === "main" ? "#contacto" : "/#contacto"}">Cita gratuita</a>
+      <a class="btn btn-small" href="${page === "main" ? "#contacto" : "/#contacto"}">Primera sesión al 50%</a>
     </div>
     <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
       <span></span><span></span><span></span>
@@ -45,7 +45,7 @@ export const renderFooter = `
       </nav>
       <div class="footer-contact">
         <a href="https://wa.me/34619781400" target="_blank" rel="noreferrer">WhatsApp</a>
-        <a href="mailto:contacto@joanpsicologia.com">Email</a>
+        <a href="mailto:relleupsicologia@gmail.com">Email</a>
       </div>
     </div>
     <div class="footer-copy">

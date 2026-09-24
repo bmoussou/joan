@@ -1,8 +1,16 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "joan-web",
+  "main": "worker/index.ts",
   "compatibility_date": "2026-04-12",
   "assets": {
-    "directory": "./dist"
+    "directory": "./dist",
+    "binding": "ASSETS"
+  },
+  "observability": {
+    "enabled": true
   }
+  // Secretos necesarios (Cloudflare → Workers → joan-web → Settings → Variables and Secrets):
+  //   GOOGLE_PLACES_API_KEY  (obligatorio)
+  //   GOOGLE_PLACE_ID        (opcional, si no se busca la ficha por nombre)
 }

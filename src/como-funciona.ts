@@ -35,7 +35,6 @@ app.innerHTML = `
             <span>Sin presiones</span>
             <span>A tu ritmo</span>
           </div>
-          <p style="font-size: 0.97rem; color: var(--muted); line-height: 1.8;">La terapia es un espacio seguro donde puedes ser tú mismo, entenderte mejor y construir una forma de vivir (y opositar) más sostenible.</p>
         </div>
       </div>
     </section>
