@@ -2245,3 +2245,8 @@ body.reviews-error .reviews-fallback {
 .btn-linkedin-light:hover { background: var(--paper); color: var(--brand-deep); }
 
 .prose-on-brand p { color: rgba(255, 255, 255, 0.92); }
+
+/* reCAPTCHA: el aviso legal sustituye a la insignia flotante */
+.grecaptcha-badge { visibility: hidden; }
+.form-legal { margin: 0.8rem 0 0; font-size: 0.72rem; line-height: 1.5; color: var(--muted); text-align: center; }
+.form-legal a { color: inherit; text-decoration: underline; }

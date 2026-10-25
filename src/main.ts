@@ -1,5 +1,6 @@
 import "./styles.css";
 import emailjs from "@emailjs/browser";
+import { setupRecaptcha } from "./recaptcha";
 import { renderHeader, renderFooter, initSharedJS } from "./layout";
 import { renderRatingBadge, renderHeroReview, renderReviewsSection, initReviews } from "./reviews";
 
@@ -377,10 +378,18 @@ emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
 
 const form = document.querySelector<HTMLFormElement>("#contact-form");
 if (form) {
+  const getCaptchaToken = setupRecaptcha(form);
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
     const btn = form.querySelector<HTMLButtonElement>("button[type='submit']");
-    if (!btn) return;
+    if (!btn || btn.disabled) return;
+    try {
+      // Si Google duda, muestra un reto; si se cierra sin resolver, no se envía nada
+      await getCaptchaToken();
+    } catch {
+      btn.textContent = "No se pudo verificar. Inténtalo de nuevo.";
+      return;
+    }
     btn.textContent = "Enviando…";
     btn.disabled = true;
     try {
