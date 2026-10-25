@@ -1,4 +1,5 @@
 import "./styles.css";
+import emailjs from "@emailjs/browser";
 import { renderHeader, renderFooter, initSharedJS } from "./layout";
 import { renderRatingBadge, renderHeroReview, renderReviewsSection, initReviews } from "./reviews";
 
@@ -371,8 +372,6 @@ initReviews();
 const EMAILJS_PUBLIC_KEY  = "D6aaLs4Nq8GnkoaXR";
 const EMAILJS_SERVICE_ID  = "service_gxwhxar";
 const EMAILJS_TEMPLATE_ID = "template_4f9gdkm";
-
-declare const emailjs: { init(opts: { publicKey: string }): void; sendForm(s: string, t: string, f: HTMLFormElement): Promise<unknown> };
 
 emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
 

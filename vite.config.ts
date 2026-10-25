@@ -24,8 +24,30 @@ function reviewsDevApi(env: Record<string, string>): Plugin {
   };
 }
 
+// Para el espejo sin Worker (GitHub Pages): guarda las reseñas como archivo
+// estático en dist/api/reviews. Solo con STATIC_REVIEWS=1; en Cloudflare
+// ese archivo taparía al Worker.
+function staticReviews(env: Record<string, string>): Plugin {
+  return {
+    name: "static-reviews",
+    apply: "build",
+    async generateBundle() {
+      if (process.env.STATIC_REVIEWS !== "1") return;
+      try {
+        const data = await fetchGoogleReviews(env);
+        this.emitFile({ type: "asset", fileName: "api/reviews", source: JSON.stringify(data) });
+      } catch (err) {
+        this.warn(`[reviews] sin reseñas en el espejo: ${(err as Error).message}`);
+      }
+    },
+  };
+}
+
 export default defineConfig(({ mode }) => ({
-  plugins: [reviewsDevApi(loadEnv(mode, process.cwd(), "GOOGLE_"))],
+  plugins: [
+    reviewsDevApi(loadEnv(mode, process.cwd(), "GOOGLE_")),
+    staticReviews(loadEnv(mode, process.cwd(), "GOOGLE_")),
+  ],
   build: {
     rollupOptions: {
       input: {
