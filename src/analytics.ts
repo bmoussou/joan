@@ -2,12 +2,12 @@
 // No se carga nada de Google hasta que la persona acepta (RGPD / guía de la AEPD).
 
 /** ID de la etiqueta de Google Ads ("AW-XXXXXXXXXX"). Vacío = sin medición. */
-const GOOGLE_TAG_ID = "";
+const GOOGLE_TAG_ID = "AW-18520819575";
 
 /** Etiquetas de conversión de Google Ads ("AW-XXXXXXXXXX/abcDEF123"). */
 const CONVERSIONS = {
-  lead: "",
-  whatsapp: "",
+  lead: "AW-18520819575/1FDbCOeb0KodEPeOtf9E",
+  whatsapp: "AW-18520819575/AeTBCOqb0KodEPeOtf9E",
   email: "",
 };
 
