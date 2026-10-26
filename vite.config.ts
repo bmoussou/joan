@@ -1,5 +1,33 @@
 import { defineConfig, loadEnv, type Plugin } from "vite";
 import { fetchGoogleReviews, type ReviewsPayload } from "./worker/reviews";
+import { html as inicio } from "./src/pages/inicio";
+import { html as quienSoy } from "./src/pages/quien-soy";
+import { html as comoFunciona } from "./src/pages/como-funciona";
+import { html as precios } from "./src/pages/precios";
+
+// Pre-renderiza el contenido de cada página dentro del HTML, para que Google
+// (y cualquier buscador o red social) lo lea sin ejecutar JavaScript.
+const PAGES: Record<string, string> = {
+  "index.html": inicio,
+  "quien-soy.html": quienSoy,
+  "como-funciona.html": comoFunciona,
+  "precios.html": precios,
+};
+
+function prerender(): Plugin {
+  return {
+    name: "prerender-pages",
+    transformIndexHtml: {
+      order: "pre",
+      handler(html, ctx) {
+        const file = ctx.filename.replace(/\\/g, "/").split("/").pop()!;
+        const content = PAGES[file];
+        if (content === undefined) return html;
+        return html.replace("<!--app-->", content);
+      },
+    },
+  };
+}
 
 // En desarrollo, sirve /api/reviews igual que el Worker de producción
 function reviewsDevApi(env: Record<string, string>): Plugin {
@@ -45,6 +73,7 @@ function staticReviews(env: Record<string, string>): Plugin {
 
 export default defineConfig(({ mode }) => ({
   plugins: [
+    prerender(),
     reviewsDevApi(loadEnv(mode, process.cwd(), "GOOGLE_")),
     staticReviews(loadEnv(mode, process.cwd(), "GOOGLE_")),
   ],

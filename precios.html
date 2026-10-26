@@ -3,21 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Precios · Relleu</title>
-    <link rel="icon" type="image/png" href="/logo-relleu.png" />
+    <title>Precios: psicólogo online para opositores | Relleu</title>
     <meta
       name="description"
-      content="Tarifas de acompañamiento en Relleu: primera sesión gratuita, sesión individual y pack de 4 sesiones."
+      content="Tarifas de Relleu: primera sesión al 50% por 25 €, sesión individual 50 € y pack de 4 sesiones por 160 €. Sesiones online para opositores de toda España."
     />
+    <link rel="canonical" href="https://relleupsicologia.com/precios" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#a14f3c" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:site_name" content="Relleu" />
+    <meta property="og:url" content="https://relleupsicologia.com/precios" />
+    <meta property="og:title" content="Precios | Relleu · Psicólogo online para opositores" />
+    <meta property="og:description" content="Primera sesión al 50% (25 €). Sesión individual 50 €. Pack de 4 sesiones 160 €." />
+    <meta property="og:image" content="https://relleupsicologia.com/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Service",
+            "name": "Acompañamiento psicológico online para opositores",
+            "serviceType": "Psicología online",
+            "provider": { "@type": "ProfessionalService", "@id": "https://relleupsicologia.com/#relleu", "name": "Relleu" },
+            "areaServed": { "@type": "Country", "name": "España" },
+            "offers": [
+              { "@type": "Offer", "name": "Primera sesión (50% de descuento)", "price": "25", "priceCurrency": "EUR", "url": "https://relleupsicologia.com/precios" },
+              { "@type": "Offer", "name": "Sesión individual", "price": "50", "priceCurrency": "EUR", "url": "https://relleupsicologia.com/precios" },
+              { "@type": "Offer", "name": "Pack de 4 sesiones", "price": "160", "priceCurrency": "EUR", "url": "https://relleupsicologia.com/precios" }
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://relleupsicologia.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Precios", "item": "https://relleupsicologia.com/precios" }
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app"><!--app--></div>
     <script type="module" src="/src/precios.ts"></script>
   </body>
 </html>

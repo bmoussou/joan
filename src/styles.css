@@ -904,7 +904,7 @@ input:focus, textarea:focus {
 
 .footer-sub {
   font-size: 0.83rem;
-  color: #7a6058;
+  color: #a8908a;
 }
 
 .footer-nav,
@@ -917,7 +917,7 @@ input:focus, textarea:focus {
 .footer-nav a,
 .footer-contact a {
   font-size: 0.88rem;
-  color: #907060;
+  color: #b39a8c;
   transition: color 0.2s;
 }
 
@@ -2250,3 +2250,80 @@ body.reviews-error .reviews-fallback {
 .grecaptcha-badge { visibility: hidden; }
 .form-legal { margin: 0.8rem 0 0; font-size: 0.72rem; line-height: 1.5; color: var(--muted); text-align: center; }
 .form-legal a { color: inherit; text-decoration: underline; }
+
+/* ── Preguntas frecuentes ── */
+.faq-list {
+  max-width: 760px;
+  margin: 0 auto;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.faq-item {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.05rem 1.3rem;
+  font-weight: 600;
+  font-size: 0.98rem;
+}
+
+.faq-item summary::-webkit-details-marker { display: none; }
+
+.faq-item summary::after {
+  content: "+";
+  flex-shrink: 0;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--brand);
+  transition: transform 0.25s ease;
+}
+
+.faq-item[open] summary::after { transform: rotate(45deg); }
+
+.faq-item p {
+  padding: 0 1.3rem 1.15rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+.faq-item a { color: var(--brand); text-decoration: underline; }
+
+/* ── Aviso de cookies ── */
+.cookie-banner {
+  position: fixed;
+  left: 50%;
+  bottom: 1rem;
+  transform: translateX(-50%);
+  width: min(560px, 92vw);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 1.1rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.cookie-banner-actions { display: flex; gap: 0.5rem; flex-shrink: 0; }
+
+@media (max-width: 600px) {
+  .cookie-banner { flex-direction: column; align-items: stretch; text-align: center; }
+  .cookie-banner-actions { justify-content: center; }
+}

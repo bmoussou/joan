@@ -3,21 +3,66 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Relleu</title>
-    <link rel="icon" type="image/png" href="/logo-relleu.png" />
+    <title>Joan Agudo Ramon, psicólogo y opositor PIR | Relleu</title>
     <meta
       name="description"
-      content="Conoce a Joan Agudo Ramon, psicólogo y opositor PIR. Su historia, formación y cómo trabaja en Relleu."
+      content="Soy Joan Agudo Ramon, psicólogo por la Universitat de Barcelona y opositor PIR (posición 591). Sé lo que es opositar porque lo he vivido. Conoce mi historia."
     />
+    <link rel="canonical" href="https://relleupsicologia.com/quien-soy" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#a14f3c" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <meta property="og:type" content="profile" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:site_name" content="Relleu" />
+    <meta property="og:url" content="https://relleupsicologia.com/quien-soy" />
+    <meta property="og:title" content="Joan Agudo Ramon, psicólogo y opositor PIR" />
+    <meta property="og:description" content="Psicólogo y opositor PIR. De esa experiencia nace Relleu, un espacio para opositores." />
+    <meta property="og:image" content="https://relleupsicologia.com/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "url": "https://relleupsicologia.com/quien-soy",
+        "inLanguage": "es-ES",
+        "mainEntity": {
+          "@type": "Person",
+          "@id": "https://relleupsicologia.com/#joan",
+          "name": "Joan Agudo Ramon",
+          "jobTitle": "Psicólogo",
+          "description": "Psicólogo y opositor PIR. Fundador de Relleu, acompañamiento psicológico online para opositores.",
+          "image": "https://relleupsicologia.com/joan.jpg",
+          "alumniOf": { "@type": "CollegeOrUniversity", "name": "Universitat de Barcelona" },
+          "knowsAbout": ["Psicología", "Ansiedad", "Oposiciones", "Terapias Contextuales", "Terapia Breve Estratégica"],
+          "worksFor": { "@type": "ProfessionalService", "@id": "https://relleupsicologia.com/#relleu", "name": "Relleu" },
+          "sameAs": ["https://www.linkedin.com/in/joan-agudo-ramon-626a98256/"]
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://relleupsicologia.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Quién soy", "item": "https://relleupsicologia.com/quien-soy" }
+          ]
+        }
+      }
+    </script>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app"><!--app--></div>
     <script type="module" src="/src/quien-soy.ts"></script>
   </body>
 </html>

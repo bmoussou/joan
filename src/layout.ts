@@ -1,3 +1,5 @@
+import { initAnalytics } from "./analytics";
+
 type Page = "main" | "sobre" | "como" | "precios";
 
 export function renderHeader(page: Page) {
@@ -8,13 +10,13 @@ export function renderHeader(page: Page) {
 
   <header class="site-header" id="site-header">
     <a class="brand brand-logo" href="/">
-      <img src="/logo-relleu.png" alt="Relleu" class="brand-img" />
+      <img src="/logo-relleu-sm.png" alt="Relleu · Psicología online para opositores" class="brand-img" width="140" height="96" />
     </a>
     <nav id="main-nav" aria-label="Navegación principal">
       <a href="/"${page === "main" ? ' class="active"' : ""}>Inicio</a>
       <a href="${page === "main" ? "#sobre-mi" : "/#sobre-mi"}"${page === "sobre" ? ' class="active"' : ""}>Sobre mí</a>
       <a href="${page === "main" ? "#como-funciona" : "/#como-funciona"}"${page === "como" ? ' class="active"' : ""}>Cómo funciona</a>
-      <a href="/precios.html"${page === "precios" ? ' class="active"' : ""}>Precios</a>
+      <a href="/precios"${page === "precios" ? ' class="active"' : ""}>Precios</a>
       <a href="${page === "main" ? "#contacto" : "/#contacto"}">Contacto</a>
     </nav>
     <div class="header-actions">
@@ -32,15 +34,15 @@ export const renderFooter = `
     <div class="container footer-inner">
       <div class="footer-brand">
         <a class="brand footer-brand-link" href="/">
-          <img src="/logo-relleu.png" alt="Relleu" class="brand-img brand-img-footer" />
+          <img src="/logo-relleu-sm.png" alt="Relleu" class="brand-img brand-img-footer" width="140" height="96" loading="lazy" />
         </a>
         <p class="footer-sub">Psicología online para opositores</p>
       </div>
       <nav class="footer-nav" aria-label="Navegación pie">
         <a href="/">Inicio</a>
-        <a href="/#sobre-mi">Sobre mí</a>
-        <a href="/#como-funciona">Cómo funciona</a>
-        <a href="/precios.html">Precios</a>
+        <a href="/quien-soy">Sobre mí</a>
+        <a href="/como-funciona">Cómo funciona</a>
+        <a href="/precios">Precios</a>
         <a href="/#contacto">Contacto</a>
       </nav>
       <div class="footer-contact">
@@ -50,13 +52,15 @@ export const renderFooter = `
     </div>
     <div class="footer-copy">
       <div class="container">
-        <p>&copy; 2025 Joan Agudo Ramon &middot; Relleu</p>
+        <p>&copy; 2026 Joan Agudo Ramon &middot; Relleu</p>
       </div>
     </div>
   </footer>
 `;
 
 export function initSharedJS() {
+  initAnalytics();
+
   const revealEls = document.querySelectorAll<HTMLElement>(".reveal");
   const revealObserver = new IntersectionObserver(
     (entries) => {
