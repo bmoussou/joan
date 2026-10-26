@@ -35,3 +35,7 @@ pnpm-debug.log*
 .DS_Store
 Thumbs.db
 .vscode/
+
+# Material interno (no se publica)
+guia-joan.html
+opencode.json
