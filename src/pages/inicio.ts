@@ -257,7 +257,7 @@ export const html = `
           </details>
           <details class="faq-item">
             <summary>¿En qué me puede ayudar un psicólogo durante la oposición?</summary>
-            <p>En la ansiedad ante el examen, los bloqueos al estudiar, la falta de motivación, la autoexigencia, la comparación con otros opositores, el cansancio mental y las dudas sobre si seguir, cambiar o dejarlo.</p>
+            <p>Un psicólogo puede ayudarte a gestionar lo que estás viviendo, desahogarte, ordenar tus ideas y encontrar una forma de opositar que te permita rendir mejor priorizando tu bienestar.</p>
           </details>
           <details class="faq-item">
             <summary>¿Cada cuánto son las sesiones y cuántas necesitaré?</summary>
